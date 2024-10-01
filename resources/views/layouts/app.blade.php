@@ -30,12 +30,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        @auth
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Clientes</a>
+                            </li>
 
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Locações</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Veículos</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Carros</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="{{route('marcas')}}">Modelos</a></li>
+                                    <li><a class="dropdown-item" href="{{route('marcas')}}">Marcas</a></li>
+                                  </ul>
+                            </li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -71,6 +90,17 @@
                 </div>
             </div>
         </nav>
+
+        @auth
+        <div class="p-3">
+            <nav aria-label="breadcrumb border">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{route('home')}}">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{Route::currentRouteName()}}</li>
+                </ol>
+            </nav>
+        </div>
+        @endauth
 
         <main class="py-4">
             @yield('content')
