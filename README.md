@@ -1,4 +1,4 @@
-# App Super Gestão
+# App CarRent
 
 **Nota: Este projeto ainda está em desenvolvimento e não está concluído.**
 
