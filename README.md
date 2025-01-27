@@ -1,7 +1,5 @@
 # App CarRent
 
-**Nota: Este projeto ainda está em desenvolvimento e não está concluído.**
-
 ## Descrição
 
 O App CarRent é um sistema de locação de veículos desenvolvido em Laravel, projetado para otimizar e facilitar a gestão de frotas e locações. Este projeto oferece uma solução completa que abrange desde o cadastro de veículos e controle de disponibilidade até a gestão de reservas, contratos, manutenção e faturamento.
